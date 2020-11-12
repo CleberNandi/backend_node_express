@@ -1,0 +1,20 @@
+const path = require('path')
+
+module.exports = {
+    config: path.resolve(__dirname, 'src', 'config', 'database.js'),
+    'migrations-path': path.resolve(__dirname, 'src', 'database', 'migrations'),
+}
+
+/**
+ * Para criar banco de dados pelo sequelize:
+ *   yarn sequelize db:create
+ * 
+ * Para criar as migrations:
+ *   yarn sequelize migration:create --name=create-users
+ * 
+ * Para criar as tabelas provindas das migrates criadas acima:
+ *   yarn sequelize db:migrate
+ * 
+ * Para desfazer a ultima alteração feita por uma migrate:
+ *   yarn sequelize db:migrate:undo
+ */
